@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    padding: 24px 16px;
+    max-width: 1400px;
+}
+
+.img {
+    width: 85px;
+    height: 85px;
+    margin-right: 26px;
+    border-radius: 50%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #878D9D;
+}
+
+.text:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.data__container {
+    margin-left: auto;
+}
