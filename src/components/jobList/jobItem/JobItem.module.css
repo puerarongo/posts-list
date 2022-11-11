@@ -27,6 +27,23 @@
     margin-bottom: 8px;
 }
 
+.container__address {
+    display: flex;
+    align-items: center;
+}
+
 .data__container {
     margin-left: auto;
+}
+
+.svg__position {
+    margin-right: 8px;
+    width: 13px;
+    height: 18px;
+    fill: #D8D8D8;
+}
+
+.svg__rectangle {
+    width: 16px;
+    height: 20px;
 }

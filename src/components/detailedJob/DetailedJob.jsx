@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import fetchGenerator from "services/generatorAPI";
 import DetailedDescription from "./detailedDescription/DetailedDescription";
 import DetailedMap from "./detailedMap/DetailedMap";
 import NotFound from "components/notFound/NotFound";
+import svgPath from "services/svgPath";
 import styles from './DetailedJob.module.css';
 
 
@@ -26,13 +27,23 @@ const DetailedJob = () => {
 
     return (
         <>
-            {!error ? (
-                <section>
-                    <DetailedDescription data={detailed} />
-                    <DetailedMap />
-                </section>
-            ) : (
-                <NotFound />
+            {detailed && (
+                <>
+                    {!error ? (
+                        <section className={styles.section}>
+                            <DetailedDescription data={detailed} />
+                            <DetailedMap />
+                            <Link to="/" className={styles.return__link}>
+                                <svg className={styles.svg__arrow}>
+                                    <use href={svgPath.arrow + "#arrow"}></use>
+                                </svg>
+                                <p>RETURN TO JOB BOARD</p>
+                            </Link>
+                        </section>
+                    ) : (
+                        <NotFound />
+                    )}
+                </>
             )}
         </>
     )
