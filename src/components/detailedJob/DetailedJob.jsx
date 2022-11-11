@@ -28,7 +28,7 @@ const DetailedJob = () => {
         <>
             {!error ? (
                 <section>
-                    <DetailedDescription />
+                    <DetailedDescription data={detailed} />
                     <DetailedMap />
                 </section>
             ) : (
