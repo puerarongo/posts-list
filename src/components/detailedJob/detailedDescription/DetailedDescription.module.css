@@ -77,6 +77,7 @@
     color: #fff;
     background-color: #384564;
     border-radius: 8px;
+    cursor: pointer;
     
     margin-bottom: 85px;
 }
@@ -85,9 +86,11 @@
 
 .item__employment,
 .item__benefits {
+    text-align: center;
     width: 122px;
-    padding: 0 17px;
+    padding: 17px 0;
     border-radius: 8px;
+    cursor: pointer;
     
     font-weight: 700;
     font-size: 16px;
@@ -106,15 +109,16 @@
     border: 1px solid #FFCF00;
 }
 
-.item__employment:not(:last-child),
-.item__benefits:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.item__img {
+.img {
     width: 200px;
     height: 115px;
     border-radius: 8px;
+}
+
+.item__employment:not(:last-child),
+.item__benefits:not(:last-child),
+.item__img:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 /* ! =================================== MEDIA =================================== ! */
@@ -153,7 +157,8 @@
     }
 
     .item__employment:not(:last-child),
-    .item__benefits:not(:last-child) {
+    .item__benefits:not(:last-child),
+    .item__img:not(:last-child) {
         margin-bottom: 0;
         margin-right: 10px;
     }

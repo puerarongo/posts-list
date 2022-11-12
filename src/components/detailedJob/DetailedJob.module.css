@@ -19,10 +19,18 @@
 
     .return__link {
         display: flex;
+        max-width: 215px;
         align-items: center;
         padding: 18px 26px 16px 23px;
         color: #3A4562;
         background-color: #EFF0F5;
         border-radius: 8px;
+    }
+
+    .link__text {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
     }
 }

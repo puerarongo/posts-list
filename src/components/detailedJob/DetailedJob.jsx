@@ -30,16 +30,18 @@ const DetailedJob = () => {
             {detailed && (
                 <>
                     {!error ? (
-                        <section className={styles.section}>
-                            <DetailedDescription data={detailed} />
-                            <DetailedMap />
+                        <>
+                            <section className={styles.section}>
+                                <DetailedDescription data={detailed} />
+                                <DetailedMap />
+                            </section>
                             <Link to="/" className={styles.return__link}>
                                 <svg className={styles.svg__arrow}>
                                     <use href={svgPath.arrow + "#arrow"}></use>
                                 </svg>
-                                <p>RETURN TO JOB BOARD</p>
+                                <p className={styles.link__text}>RETURN TO JOB BOARD</p>
                             </Link>
-                        </section>
+                        </>
                     ) : (
                         <NotFound />
                     )}

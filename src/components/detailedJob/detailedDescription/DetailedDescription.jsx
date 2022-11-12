@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import lineDelimiter from "services/lineDelimiter";
 import styles from './DetailedDescription.module.css';
 
+import mapAPI from "services/mapAPI";
 
 const DetailedDescription = ({ data }) => {
     const [descriptionArr, setDescriptionArr] = useState([]);
@@ -10,7 +11,10 @@ const DetailedDescription = ({ data }) => {
         if (data) {
             setDescriptionArr(lineDelimiter(data.description))
         }
+
+        mapAPI().then(res => console.log(res)).catch(err => console.error(err))
     }, [data])
+
 
     return (
         <div className={styles.main__container}>
@@ -68,7 +72,7 @@ const DetailedDescription = ({ data }) => {
                     {data.pictures.map((elem, i) => {
                         return (
                             <li className={styles.item__img} key={i}>
-                                <img src={elem} alt={i} />
+                                <img className={styles.img} src={elem} alt={i} />
                             </li>
                         )
                     })}
