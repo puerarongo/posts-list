@@ -4,8 +4,15 @@ import rectangle from "../img/rectangle.svg";
 import shape from "../img/shape.svg";
 import star from "../img/star.svg";
 
+interface svgObject {
+    arrow: string,
+    position: string,
+    rectangle: string,
+    shape: string,
+    star: string,
+}
 
-const svgPath = {
+const svgPath: svgObject = {
     arrow,
     position,
     rectangle,

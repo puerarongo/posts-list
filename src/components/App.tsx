@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import JobList from "./jobList/JobList";
-import DetailedJob from "./detailedJob/DetailedJob";
-import NotFound from "./notFound/NotFound";
+import JobList from './jobList/JobList';
+import DetailedJob from './detailedJob/DetailedJob';
+import NotFound from './notFound/NotFound';
+import './App.css';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Routes>
@@ -14,6 +15,6 @@ const App = () => {
       </Routes>
     </>
   );
-};
+}
 
 export default App;

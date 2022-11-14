@@ -1,8 +1,15 @@
-import React from 'react';
-import svgPath from 'services/svgPath';
+import React, {useState, useEffect} from "react";
+import IDataList from "../../../types/typeDataList";
+import svgPath from "../../../services/svgPath";
 import styles from './JobItem.module.css';
 
-const JobItem = ({ data }) => {
+
+interface IJobItem {
+    data: IDataList
+};
+
+const JobItem: React.FC<IJobItem> = ({ data }) => {
+
     return (
         <>
             <div className={styles.container}>
@@ -13,7 +20,7 @@ const JobItem = ({ data }) => {
                     <div className={styles.container__address}>
                         <svg className={styles.svg__position}>
                             <use href={svgPath.position + "#position"}></use>
-                        </svg>
+                        </svg>  
                         <p className={styles.text}>{data.address}</p>
                     </div>
                 </div>

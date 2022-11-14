@@ -1,36 +1,35 @@
+.root {
+    @apply flex;
+}
+
+.main {
+    @apply mx-auto;
+}
+
 .section {
-    display: block;
+    @apply block pt-[24px];
 }
 
 .return__link {
-    display: none;
+    @apply hidden;
 }
 
 .svg__arrow {
-    width: 10px;
-    height: 18px;
-    margin-right: 20px;
+    @apply w-[10px] h-[18px] mr-[20px];
 }
+
 
 @media screen and (min-width: 1200px) {
     .section {
-        display: flex;
+        @apply flex pt-[56px];
     }
 
     .return__link {
-        display: flex;
-        max-width: 215px;
-        align-items: center;
-        padding: 18px 26px 16px 23px;
-        color: #3A4562;
-        background-color: #EFF0F5;
-        border-radius: 8px;
+        @apply flex items-center max-w-[225px] pt-[18px] pr-[26px] pb-[16px] pl-[23px]
+        text-[#3A4562] bg-[#EFF0F5] rounded-[8px]; 
     }
 
     .link__text {
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
-        text-transform: uppercase;
+        @apply font-semibold text-[12px] leading-[16px] uppercase;   
     }
 }

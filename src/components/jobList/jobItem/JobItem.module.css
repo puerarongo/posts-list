@@ -1,49 +1,35 @@
 .container {
-    display: flex;
-    padding: 24px 16px;
-    max-width: 1400px;
+    @apply flex  py-[24px] px-[16px];
 }
 
 .img {
-    width: 85px;
-    height: 85px;
-    margin-right: 26px;
-    border-radius: 50%;
+    @apply w-[85px] h-[85px] mr-[26px] rounded-[50%];
 }
 
 .title {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 8px;
+    @apply font-bold text-subTitle mb-[8px];
 }
 
 .text {
-    font-weight: 400;
-    font-size: 16px;
-    color: #878D9D;
+    @apply font-normal text-[16px] text-[#878D9D];
 }
 
 .text:not(:last-child) {
-    margin-bottom: 8px;
+    @apply mb-[8px];
 }
 
 .container__address {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
 }
 
 .data__container {
-    margin-left: auto;
+    @apply ml-auto;
 }
 
 .svg__position {
-    margin-right: 8px;
-    width: 13px;
-    height: 18px;
-    fill: #D8D8D8;
+    @apply w-[13px] h-[18px] mr-[8px];
 }
 
 .svg__rectangle {
-    width: 16px;
-    height: 20px;
+    @apply w-[20px] h-[25px];
 }
