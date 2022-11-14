@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import IDataList from "../../../types/typeDataList";
 import svgPath from "../../../services/svgPath";
 import styles from './JobItem.module.css';
