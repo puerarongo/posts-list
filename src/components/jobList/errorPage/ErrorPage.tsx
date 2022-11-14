@@ -1,9 +1,13 @@
 import React from "react";
+import ReactPaginate from 'react-paginate';
 import styles from './ErrorPage.module.css';
 
 const ErrorPage: React.FC = () => {
     return (
-        <h2 className={styles.title}>Too many requests, please try again later!</h2>
+        <div className={styles.container}>
+            <h2 className={styles.title}>Too many requests, please try again later!</h2>
+        </div>
+        
     )
 }
 

@@ -3,7 +3,7 @@
 }
 
 .container {
-    @apply flex mb-[25px] px-0;
+    @apply flex pb-[25px] px-0;
 }
 
 .list__container {
@@ -22,8 +22,12 @@
     @apply text-[#3A4562];
 }
 
+.pagination {
+    @apply flex;
+}
+
 @media screen and (min-width: 1200px) {
     .container {
-        @apply mb-[50px];
+        @apply pb-[50px];
     }
 }
