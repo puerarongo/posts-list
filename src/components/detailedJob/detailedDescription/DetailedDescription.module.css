@@ -50,7 +50,6 @@
     @apply font-bold text-[24px] leading-[30px] mb-[10px];
 }
 
-.container__salary {}
 
 .salary {
     @apply font-bold text-subTitle leading-[25px];
