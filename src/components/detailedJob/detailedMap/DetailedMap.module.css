@@ -54,14 +54,6 @@
     @apply mx-auto
 }
 
-.mapboxgl-control-container,
-.mapboxgl-ctrl-bottom-right,
-.mapboxgl-ctrl, 
-.mapboxgl-ctrl-attrib,
-.mapboxgl-compact {
-    display: none;
-}
-
 @media screen and (min-width: 1200px) {
     .title {
         @apply hidden;
