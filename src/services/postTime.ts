@@ -1,4 +1,4 @@
-const getTime = (value) => {
+const getTime = (value: string) => {
     const timeNow = new Date().getTime();
     const postTime = new Date(value).getTime();
 
@@ -13,7 +13,7 @@ const getTime = (value) => {
     return {seconds, minutes, hours, days, months, years}
 };
 
-const getPostTime = (value) => {
+const getPostTime = (value: string) => {
     const { seconds, minutes, hours, days, months, years } = getTime(value);
     if (years > 0) return `Posted ${years} years ago`
     else if (months > 0) return `Posted ${months} months ago`
