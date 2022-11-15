@@ -11,7 +11,7 @@
 }
 
 .item {
-    @apply bg-[#ffffff] shadow-item-shadow rounded-[8px] w-[1200px];
+    @apply bg-[#ffffff] shadow-item-shadow rounded-[8px] max-w-[450px];
 }
 
 .item:not(:last-child) {
@@ -29,5 +29,9 @@
 @media screen and (min-width: 1200px) {
     .container {
         @apply pb-[50px];
+    }
+
+    .item {
+        @apply max-w-[1200px];
     }
 }
