@@ -42,17 +42,28 @@
 }
 
 /* * Salary */
-.container__title {
-    @apply block;
-}
-
 .title {
     @apply font-bold text-[24px] leading-[30px] mb-[10px];
 }
 
+.container__title {
+    @apply flex items-center;
+}
+
+.date {
+    @apply text-[#38415d9a] opacity-60 font-light text-[13px] leading-[25px];
+}
+
+.container__salary {
+    @apply ml-auto;
+}
 
 .salary {
-    @apply font-bold text-subTitle leading-[25px];
+    @apply font-bold text-subTitle leading-[25px] text-end;
+}
+
+.salary__text {
+    @apply font-normal text-mainText leading-main-text mb-[4px];
 }
 
 /* * Description */
@@ -138,7 +149,7 @@
     }
 
     .container__header {
-        @apply flex items-center;
+        @apply flex items-center mb-0;
     }
 
     .header__title {
@@ -158,12 +169,20 @@
     }
 
     /* * Salary */
+    .title {
+        @apply w-[70%] mr-[60px];
+    }
+
     .container__title {
         @apply flex;
     }
 
-    .title {
-        @apply w-[70%] mr-[60px];
+    .salary__text {
+        @apply font-normal text-mainText leading-main-text mb-0;
+    }
+
+    .date {
+        @apply font-normal text-mainText leading-main-text mb-[8px];
     }
 
     /* * Description */

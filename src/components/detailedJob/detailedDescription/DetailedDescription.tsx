@@ -66,11 +66,11 @@ const DetailedDescription: React.FC<IDescription> = ({ data }) => {
                                     <>
                                         <h2 className={styles.title}>{data.title}</h2>
                                         <div className={styles.container__title}>
+                                            <p className={styles.date}>Posted data</p>
                                             <div className={styles.container__salary}>
+                                                <p className={styles.salary__text}>Brutto, per year</p>
                                                 <h3 className={styles.salary}>{data.salary}</h3>
-                                                <p>Brutto, per year</p>
                                             </div>
-                                            <p>Posted data</p>
                                         </div>
                                     </>
                                 }
@@ -80,10 +80,10 @@ const DetailedDescription: React.FC<IDescription> = ({ data }) => {
                                             <h2 className={styles.title}>{data.title}</h2>
                                             <div className={styles.container__salary}>
                                                 <h3 className={styles.salary}>{data.salary}</h3>
-                                                <p>Brutto, per year</p>
+                                                <p className={styles.salary__text}>Brutto, per year</p>
                                             </div>
                                         </div>
-                                        <p>Posted data</p>
+                                        <p className={styles.date}>Posted data</p>
                                     </>
                                 }
                             </>
