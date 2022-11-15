@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPaginate from 'react-paginate';
 import styles from './ErrorPage.module.css';
 
 const ErrorPage: React.FC = () => {
