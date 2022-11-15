@@ -14,12 +14,12 @@ const App: React.FC = () => {
   const [error, setError] = useState<string>("");
   
   useEffect(() => {
-        setLoading(true);
-        fetchGenerator().then(({ data }) => {
-          setData([...data])
-        })
-          .catch(err => setError(err))
-        setLoading(false);  
+    setLoading(true);
+    fetchGenerator().then(({ data }) => {
+      setData([...data])
+    })
+      .catch(err => setError(err))
+    setLoading(false);  
   }, [setData]);
   
 

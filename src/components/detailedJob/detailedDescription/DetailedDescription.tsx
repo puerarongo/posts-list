@@ -56,14 +56,39 @@ const DetailedDescription: React.FC<IDescription> = ({ data }) => {
                 </a>
             </div>
             <hr className={styles.header__border2} />
-            <div className={styles.container__title}>
-                <h2 className={styles.title}>{data.title}</h2>
-                <div className={styles.container__salary}>
-                    <h3 className={styles.salary}>{data.salary}</h3>
-                    <p>Brutto, per year</p>
-                </div>
-            </div>
-            <p>Posted data</p>
+            <Media queries={{
+                        small: "(min-width: 360px) and (max-width: 1199px)",
+                        large: "(min-width: 1200px)"
+                    }}>
+                        {matches => (
+                            <>
+                                {matches.small &&
+                                    <>
+                                        <h2 className={styles.title}>{data.title}</h2>
+                                        <div className={styles.container__title}>
+                                            <div className={styles.container__salary}>
+                                                <h3 className={styles.salary}>{data.salary}</h3>
+                                                <p>Brutto, per year</p>
+                                            </div>
+                                            <p>Posted data</p>
+                                        </div>
+                                    </>
+                                }
+                                {matches.large &&
+                                    <>
+                                        <div className={styles.container__title}>
+                                            <h2 className={styles.title}>{data.title}</h2>
+                                            <div className={styles.container__salary}>
+                                                <h3 className={styles.salary}>{data.salary}</h3>
+                                                <p>Brutto, per year</p>
+                                            </div>
+                                        </div>
+                                        <p>Posted data</p>
+                                    </>
+                                }
+                            </>
+                        )}
+            </Media>
             <div className={styles.description__container}>
                 <p className={styles.description__text}>{descriptionArr[0]}</p>
                 <h3 className={styles.description__title}>Responsopilities:</h3>
