@@ -3,6 +3,7 @@ import Media from "react-media";
 import lineDelimiter from "../../../services/lineDelimiter";
 import IDataList from "../../../types/typeDataList";
 import svgPath from "../../../services/svgPath";
+import getPostTime from "../../../services/postTime";
 import styles from './DetailedDescription.module.css';
 
 
@@ -66,7 +67,7 @@ const DetailedDescription: React.FC<IDescription> = ({ data }) => {
                                     <>
                                         <h2 className={styles.title}>{data.title}</h2>
                                         <div className={styles.container__title}>
-                                            <p className={styles.date}>Posted data</p>
+                                            <p className={styles.date}>{getPostTime(data.updatedAt)}</p>
                                             <div className={styles.container__salary}>
                                                 <p className={styles.salary__text}>Brutto, per year</p>
                                                 <h3 className={styles.salary}>{data.salary}</h3>
@@ -83,7 +84,7 @@ const DetailedDescription: React.FC<IDescription> = ({ data }) => {
                                                 <p className={styles.salary__text}>Brutto, per year</p>
                                             </div>
                                         </div>
-                                        <p className={styles.date}>Posted data</p>
+                                        <p className={styles.date}>{getPostTime(data.updatedAt)}</p>
                                     </>
                                 }
                             </>

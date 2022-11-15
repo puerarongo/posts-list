@@ -67,7 +67,7 @@
     }
 
     .date__container {
-        @apply block ml-auto w-[140px];
+        @apply block ml-auto w-[150px];
     }
 
     .svg__rectangle {

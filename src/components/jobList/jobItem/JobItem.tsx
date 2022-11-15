@@ -2,6 +2,7 @@ import React from "react";
 import Media from "react-media";
 import IDataList from "../../../types/typeDataList";
 import svgPath from "../../../services/svgPath";
+import getPostTime from "../../../services/postTime";
 import styles from './JobItem.module.css';
 
 
@@ -21,7 +22,7 @@ const JobItem: React.FC<IJobItem> = ({ data }) => {
                                         <svg className={styles.svg__stars}>
                                             <use href={svgPath.stars + "#stars"}></use>
                                         </svg>
-                                        <p className={styles.date}>Posted</p>
+                                        <p className={styles.date}>{getPostTime(data.updatedAt)}</p>
                                     </div>
                                 }
                             </>
@@ -48,7 +49,7 @@ const JobItem: React.FC<IJobItem> = ({ data }) => {
                                             <svg className={styles.svg__rectangle}>
                                                 <use href={svgPath.rectangle + "#rectangle"}></use>
                                             </svg>
-                                            <p className={styles.date}>Posted</p>
+                                            <p className={styles.date}>{getPostTime(data.updatedAt)}</p>
                                         </div>
                                     </div>
                                 }
