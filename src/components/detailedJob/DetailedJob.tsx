@@ -37,7 +37,8 @@ const DetailedJob: React.FC = () => {
                                 <div className={styles.section}>
                                     <DetailedDescription data={detailed} />
                                     <DetailedMap name={detailed.name} address={detailed.address}
-                                        phone={detailed.phone} email={detailed.email} />
+                                        phone={detailed.phone} email={detailed.email}
+                                        location={detailed.location} />
                                 </div>
                                 <Link to="/" className={styles.return__link}>
                                     <svg className={styles.svg__arrow}>

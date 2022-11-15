@@ -1,4 +1,6 @@
 import React from "react";
+import ReactMapGL from 'react-map-gl';
+import token from "../../../services/mapboxToken";
 import svgPath from "../../../services/svgPath";
 import styles from './DetailedMap.module.css';
 
@@ -7,9 +9,13 @@ interface IMap {
     address: string,
     phone: string,
     email: string,
+    location: {
+        lat: number,
+        long: number
+    }
 }
 
-const DetailedMap: React.FC<IMap> = ({name, address, phone, email}) => {
+const DetailedMap: React.FC<IMap> = ({ name, address, phone, email, location }) => {
     return (
         <div className={styles.section}>
             <h2 className={styles.title}>Contacts</h2>
@@ -28,7 +34,20 @@ const DetailedMap: React.FC<IMap> = ({name, address, phone, email}) => {
                     <p className={styles.contact}>{email}</p>
                     </div>
                 </div>
-            <div className={styles.map__container}>Place for map</div>
+                <div className={styles.map__container}>
+                    <div className={styles.map}>
+                    <ReactMapGL
+                        initialViewState={{
+                            latitude: location.lat,
+                            longitude: location.long,
+                            zoom: 10
+                        }}
+                        style={{ width: '390px', height: '250px' }}
+                        mapStyle="mapbox://styles/mapbox/streets-v9"
+                        mapboxAccessToken={token}
+                    ></ReactMapGL>
+                    </div>
+                </div>
             </div>
         </div>
     )
