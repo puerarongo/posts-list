@@ -3,6 +3,7 @@ import ReactMapGL from 'react-map-gl';
 import token from "../../../services/mapboxToken";
 import svgPath from "../../../services/svgPath";
 import styles from './DetailedMap.module.css';
+// import mapboxgl from 'mapbox-gl';
 
 interface IMap {
     name: string,
