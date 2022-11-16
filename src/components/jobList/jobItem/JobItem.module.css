@@ -46,7 +46,7 @@
     }
 
     .img {
-        @apply w-[85px] h-[85px] mr-[26px];
+        @apply min-w-[85px] h-[85px] mr-[26px];
     }
 
     .title {
