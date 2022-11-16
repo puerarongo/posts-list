@@ -1,9 +1,9 @@
 import React from "react";
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, {Marker} from 'react-map-gl';
+import Media from "react-media";
 import token from "../../../services/mapboxToken";
 import svgPath from "../../../services/svgPath";
 import styles from './DetailedMap.module.css';
-// import mapboxgl from 'mapbox-gl';
 
 interface IMap {
     name: string,
@@ -37,16 +37,51 @@ const DetailedMap: React.FC<IMap> = ({ name, address, phone, email, location }) 
                 </div>
                 <div className={styles.map__container}>
                     <div className={styles.map}>
-                    <ReactMapGL
-                        initialViewState={{
-                            latitude: location.lat,
-                            longitude: location.long,
-                            zoom: 10
-                        }}
-                        style={{ width: '390px', height: '250px' }}
-                        mapStyle="mapbox://styles/mapbox/streets-v9"
-                        mapboxAccessToken={token}
-                    ></ReactMapGL>
+                    <Media queries={{
+                        small: "(max-width: 1199px)",
+                        large: "(min-width: 1200px)"
+                    }}>
+                        {matches => (
+                            <>
+                                {matches.small &&
+                                    <ReactMapGL
+                                        initialViewState={{
+                                            latitude: location.lat,
+                                            longitude: location.long,
+                                            zoom: 14
+                                        }}
+                                        style={{ width: '360px', height: '255px' }}
+                                        mapStyle="mapbox://styles/mapbox/streets-v9"
+                                        mapboxAccessToken={token}
+                                    >
+                                        <Marker latitude={location.lat} longitude={location.long}>
+                                            <svg className={styles.svg__marker}>
+                                                <use href={svgPath.marker + "#marker"}></use>
+                                            </svg>
+                                        </Marker>    
+                                    </ReactMapGL>
+                                }
+                                {matches.large &&
+                                    <ReactMapGL
+                                        initialViewState={{
+                                            latitude: location.lat,
+                                            longitude: location.long,
+                                            zoom: 14
+                                        }}
+                                        style={{ width: '394px', height: '255px' }}
+                                        mapStyle="mapbox://styles/mapbox/streets-v9"
+                                        mapboxAccessToken={token}
+                                    >
+                                        <Marker latitude={location.lat} longitude={location.long}>
+                                            <svg className={styles.svg__marker}>
+                                                <use href={svgPath.marker + "#marker"}></use>
+                                            </svg>
+                                        </Marker>  
+                                    </ReactMapGL>
+                                }
+                            </>
+                        )}
+                    </Media>
                     </div>
                 </div>
             </div>

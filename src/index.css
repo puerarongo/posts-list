@@ -23,3 +23,7 @@ code {
 .mapboxgl-compact {
   display: none;
 }
+
+.mapboxgl-canvas {
+  width: 370px;
+}

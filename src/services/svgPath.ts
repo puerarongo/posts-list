@@ -1,4 +1,5 @@
 import arrow from "../img/arrow.svg";
+import marker from "../img/marker.svg";
 import position from "../img/position.svg";
 import rectangle from "../img/rectangle.svg";
 import shape from "../img/shape.svg";
@@ -8,6 +9,7 @@ import big__stars from "../img/big__stars.svg";
 
 interface svgObject {
     arrow: string,
+    marker: string
     position: string,
     rectangle: string,
     shape: string,
@@ -18,6 +20,7 @@ interface svgObject {
 
 const svgPath: svgObject = {
     arrow,
+    marker,
     position,
     rectangle,
     shape,
