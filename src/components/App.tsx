@@ -16,7 +16,6 @@ const App: React.FC = () => {
   useEffect(() => {
     setLoading(true);
     fetchGenerator().then(({ data }) => {
-      console.log(data)
       setData([...data])
     })
       .catch(err => setError(err))
